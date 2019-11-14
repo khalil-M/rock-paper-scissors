@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <script>
-            
-        </script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <script>
+        let userScore = 0;
+        let computerScore = 0;
+        function computerPlay() {
+            const randomNum = Math.floor(Math.random() * 3) + 1
+            return randomNum === 1 ? 'rock' : randomNum === 2 ? 'paper' : randomNum === 3 ? 'scissor';
+        }
+
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection === 'rock') {
+                if (computerSelection === 'scissor')
+                userScore += 1;
+            } else if(computerSelection === 'paper'){
+               computerScore += 1;
+            } else if(computerSelection === 'rock'){
+
+            } else if(playerSelection === 'scissor') {
+                if(computerSelection === 'rock')
+                computerScore += 1;
+            } else if (computerSelection === 'paper'){
+                userScore =+ 1;
+            } else if(computerSelection === 'scissor'){
+
+            }
+        }
+
+    </script>
+</body>
+
 </html>
